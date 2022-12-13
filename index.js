@@ -1,5 +1,7 @@
 const sequelize = require('./database');
 const app = require('./app');
+// Generate associations
+require('./database/asociations');
 
 // Verify the model
 // console.log(sequelize.models); // { User: Model }

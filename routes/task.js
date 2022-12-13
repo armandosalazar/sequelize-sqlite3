@@ -27,11 +27,12 @@ module.exports = Router()
   })
   .post('/', async function (req, res, next) {
     // Do something
-    const { title, description, completed } = req.body;
+    const { title, description, studentId, completed } = req.body;
     const task = new Task({
       title,
       description,
       completed,
+      studentId,
     });
     await task.save();
     console.log(task.toJSON());
@@ -40,12 +41,13 @@ module.exports = Router()
   .put('/:id', async function (req, res, next) {
     // Do something
     const { id } = req.params;
-    const { title, description, completed } = req.body;
+    const { title, description, studentId, completed } = req.body;
     const status = await Task.update(
       {
         title,
         description,
         completed,
+        studentId,
       },
       {
         where: {
