@@ -1,6 +1,7 @@
 **Nota**
 
 > Enviar id de foreign key como `StudentId` en lugar de `studentId`.
+
 > En este caso tenemos una relecion uno a muchos, un estudiante a muchas tareas.
 
 ```json
