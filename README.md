@@ -1,10 +1,22 @@
-### Comands
-$ npm install --save sequelize
+**Nota**
 
-### One of the following:
-$ npm install --save pg pg-hstore # Postgres  
-$ npm install --save mysql2  
-$ npm install --save mariadb  
-$ npm install --save sqlite3  
-$ npm install --save tedious # Microsoft SQL Server  
-$ npm install --save oracledb # Oracle Database  
+> Enviar id de foreign key como `StudentId` en lugar de `studentId`.
+> En este caso tenemos una relecion uno a muchos, un estudiante a muchas tareas.
+
+```json
+{
+  "firstName": "Student 1",
+  "lastName": "Student 1 last name",
+  "age": 20,
+  "grade": 10
+}
+```
+
+```json
+{
+  "title": "Task 1",
+  "description": "Task 1 description",
+  "completed": false,
+  "StudentId": 1
+}
+```
